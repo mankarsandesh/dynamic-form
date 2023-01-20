@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import schema from "../static/schema.json";
+import schema from '../static/schema.json';
 import {
    booleanForm,
    colorForm,
@@ -85,11 +85,11 @@ import {
    stringForm,
    uriForm,
    wysiwygForm,
-} from "../components/Form";
-import { defineComponent } from "vue";
+} from '../components/Form';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-   name: "IndexPage",
+   name: 'IndexPage',
    components: {
       booleanForm,
       colorForm,
@@ -106,29 +106,32 @@ export default defineComponent({
       };
    },
    methods: {
+      // Clear Form
       clearForm() {
          this.NewData = [];
       },
+      // Remove Block from Array
       removeObj(id) {
          this.loading = true;
          const arrCopy = Array.from(this.NewData);
          const objWithIdIndex = arrCopy.findIndex((obj, index) => index === id);
          arrCopy.splice(objWithIdIndex, 1);
          this.NewData = arrCopy;
-         console.log(arrCopy);
          this.loading = false;
       },
+      // Add Block to Form
       addBlock(object) {
          this.loading = true;
-
          console.log(object);
          this.NewData.push(object);
          this.loading = false;
       },
+      // On Click Submit
       onSubmit() {
          // eslint-disable-next-line
-         console.log("Form submitted yay!");
+         console.log('Form submitted yay!');
       },
+      // Reset Form
       onReset() {
          requestAnimationFrame(() => {
             this.$refs.observer.reset();

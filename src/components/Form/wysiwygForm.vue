@@ -1,20 +1,19 @@
 <template>
    <div class="box" :class="ClassStyle">
       <label>{{ name }}</label>
-      <q-editor v-model="editor" min-height="5rem" :rules="validations" />
+      <q-editor v-model="newValue" min-height="5rem" :rules="validations" />
    </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import { ref } from "vue";
+import { defineComponent } from 'vue';
+import { ref } from 'vue';
 
 export default defineComponent({
    data() {
       return {
-         editor: ref(this.values),
-         newValue: "",
-         ClassStyle: "col-12",
+         newValue: this.values,
+         ClassStyle: 'col-12',
       };
    },
    props: {

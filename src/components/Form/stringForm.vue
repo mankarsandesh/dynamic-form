@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import { ref } from "vue";
+import { defineComponent } from 'vue';
+import { ref } from 'vue';
 export default defineComponent({
    data() {
       return {
          newValue: ref(this.values ? this.values : this.default),
-         ClassStyle: "col-12",
+         ClassStyle: 'col-12',
       };
    },
    props: {
@@ -53,13 +53,15 @@ export default defineComponent({
       },
    },
    computed: {
+      // validation Rule Don't used Yet
       validationRule: {
          get: function () {
-            return this.validations.join("|");
+            return this.validations.join('|');
          },
       },
    },
    mounted() {
+      // UI Class Append in Style
       if (this.ui) {
          for (const [key, value] of Object.entries(this.ui)) {
             this.ClassStyle = `${key}-${value}`;

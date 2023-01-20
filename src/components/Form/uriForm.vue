@@ -12,14 +12,14 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-   name: "uriForm",
+   name: 'uriForm',
    data() {
       return {
          newValue: this.values,
-         ClassStyle: "col-12",
+         ClassStyle: 'col-12',
       };
    },
    props: {
@@ -43,6 +43,13 @@ export default defineComponent({
          type: String,
          default: null,
       },
+   },
+   mounted() {
+      if (this.ui) {
+         for (const [key, value] of Object.entries(this.ui)) {
+            this.ClassStyle = `${key}-${value}`;
+         }
+      }
    },
 });
 </script>
