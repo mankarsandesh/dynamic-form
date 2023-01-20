@@ -2,7 +2,7 @@
    <q-page-container class="box BlockTitle">
       <div class="row">
          <div class="col-4 bg-blue-grey-1 leftBoxBlock">
-            <p class="q-pa-sm">Add Blocks and Create Form</p>
+            <p class="q-pa-sm">Click Blocks and Add Block to Form</p>
             <q-card
                class="my-card"
                v-for="(data, index) in FormData"
@@ -25,8 +25,8 @@
                   <q-spinner-facebook color="primary" size="2em" />
                   <q-tooltip :offset="[0, 8]">QSpinnerFacebook</q-tooltip>
                </div>
-               <p class="q-pa-sm text-blue-5" v-if="NewData.length > 0">
-                  Creating Articles Form
+               <p class="q-pa-sm text-blue-5 text-h4" v-if="NewData.length > 0">
+                  Articles Form
                </p>
 
                <div
@@ -143,11 +143,11 @@ export default defineComponent({
 <style>
 .leftBoxBlock {
    border-radius: 4px;
-   padding: 4px;
+   padding: 10px 10px;
    height: 100% !important;
    position: -webkit-sticky;
    position: sticky;
-   top: 70px;
+   top: 40px;
 }
 .BlockTitle {
    padding: 8px 14px;
@@ -166,7 +166,7 @@ export default defineComponent({
    padding: 8px 4px;
 }
 .rightBox {
-   padding: 5px 10px;
+   padding: 0px 10px;
    border-radius: 5px;
    /* height: 100%; */
 }
