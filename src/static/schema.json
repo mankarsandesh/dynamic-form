@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Text",
+    "key": "Text",
+    "fields": [
+      {
+        "key": "html",
+        "type": "editor",
+        "name": "HTML",
+        "validations": [
+          "nullable",
+          "string"
+        ],
+        "values": null,
+        "ui": null,
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      }
+    ]
+  },
+  {
+    "name": "Image",
+    "key": "Image",
+    "fields": [
+      {
+        "key": "url",
+        "type": "uri",
+        "name": "Image URL",
+        "validations": [
+          "required",
+          "string",
+          "uri"
+        ],
+        "values": "ssdsd",
+        "ui": null,
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      },
+      {
+        "key": "caption",
+        "type": "string",
+        "name": "Caption",
+        "validations": [
+          "nullable",
+          "string"
+        ],
+        "values": "s",
+        "ui": null,
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      }
+    ]
+  },
+  {
+    "name": "FactBox",
+    "key": "TextBox",
+    "fields": [
+      {
+        "key": "body",
+        "type": "wysiwyg",
+        "name": "Description",
+        "validations": [
+          "nullable",
+          "string"
+        ],
+        "values": "dsdsdd",
+        "ui": null,
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      },
+      {
+        "key": "color",
+        "type": "color",
+        "name": "Color",
+        "description": "Used only red color",
+        "placeholder": null,
+        "default": null,
+        "expression": null,
+        "validations": [
+          "nullable"
+        ],
+        "values": null,
+        "ui": {
+          "col": 6
+        },
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      },
+      {
+        "key": "fold",
+        "type": "boolean",
+        "name": "Expand",
+        "description": "Choose whether the fact box should be open or closed by default",
+        "placeholder": null,
+        "default": "0",
+        "expression": null,
+        "validations": [
+          "required"
+        ],
+        "values": "1",
+        "ui": {
+          "col": 6
+        },
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      },
+      {
+        "key": "title",
+        "type": "string",
+        "name": "Title",
+        "description": null,
+        "placeholder": null,
+        "default": null,
+        "expression": null,
+        "validations": [
+          "required",
+          "string"
+        ],
+        "values": null,
+        "ui": null,
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      }
+    ]
+  },
+  {
+    "name": "Quote",
+    "key": "Quote",
+    "fields": [
+      {
+        "key": "author",
+        "type": "string",
+        "name": "Author",
+        "default": null,
+        "expression": null,
+        "validations": [
+          "nullable",
+          "string"
+        ],
+        "values": null,
+        "ui": {
+          "col": 6
+        },
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      },
+      {
+        "key": "quote",
+        "type": "string",
+        "name": "quote",
+        "description": "Description",
+        "placeholder": "placeholder",
+        "default": null,
+        "expression": null,
+        "validations": [
+          "required",
+          "string"
+        ],
+        "values": null,
+        "ui": {
+          "col": 6
+        },
+        "multiple": false,
+        "multiple_min": null,
+        "multiple_max": null
+      }
+    ]
+  }
+]
